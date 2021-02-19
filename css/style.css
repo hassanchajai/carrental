@@ -1,0 +1,792 @@
+/*  */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Poppins, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--light);
+    font-size: 1rem;
+}
+
+:root {
+    --green: #478261;
+    --light: #FDFBFB;
+    --gray: #BBB9B9;
+    --black: #000000;
+    --red: red;
+}
+
+
+/*  */
+
+
+/* header */
+
+header {
+    width: 100%;
+    padding: 30px 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.close {
+    display: none;
+}
+
+header .logo {
+    font-size: 1.4rem;
+    color: #2c2c2c;
+}
+
+header .logo span {
+    color: var(--red);
+}
+
+header .navbar-toggler {
+    display: none;
+}
+
+header .navbar-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+header .navbar-links li {
+    margin-left: 25px;
+}
+
+header .navbar-links li a {
+    text-decoration: none;
+    color: var(--black);
+    outline: none;
+}
+
+header .navbar-sm-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+header .navbar-sm-links li {
+    margin-left: 15px;
+}
+
+header .navbar-sm-links li a {
+    text-decoration: none;
+    color: var(--black);
+    outline: none;
+}
+
+
+/* end of header */
+
+
+/* main  */
+
+.main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc( 100vh - 94px);
+    padding: 0 70px;
+}
+
+.main .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--green);
+    clip-path: circle(600px at right 760px);
+    z-index: -99;
+}
+
+.main .content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.main .content h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.main .content h2 span {
+    font-size: 2rem;
+    color: var(--green);
+}
+
+.main .content .content-button {
+    margin-left: 15px;
+    padding: 10 30px;
+    background-color: var(--black);
+    color: white;
+    outline: none;
+    text-decoration: none;
+    border-radius: 2px;
+    position: relative;
+    transition: .5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.main .content .content-button::before {
+    content: "";
+    position: absolute;
+    width: 96%;
+    height: 86%;
+    border: 5px solid var(--black);
+    z-index: -99;
+    left: -24px;
+    top: 10px;
+    transition: .5s ease-in-out all;
+}
+
+.main .content .content-button:hover::before {
+    left: -0;
+    top: 0;
+}
+
+.button-down {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid black;
+    border-radius: 70px;
+    padding: 10px;
+    color: black;
+}
+
+.button-down .fas {
+    animation: .5s mymove;
+}
+
+@keyframes mymove {
+    from {
+        top: 0px;
+    }
+    to {
+        top: 200px;
+    }
+}
+
+
+/* end of Main */
+
+
+/* about */
+
+.about {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 50px;
+    width: 100%;
+}
+
+
+/* about img */
+
+.about-img {
+    width: 796px;
+    height: 371px;
+    padding-right: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.about-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.about-img a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: white;
+    transition: .5s;
+}
+
+.about-img:hover a {
+    color: red;
+}
+
+.details {
+    font-size: 2rem;
+}
+
+
+/*end of about image */
+
+
+/* begin of image content */
+
+.about-content .about-content-text {
+    width: 75%;
+    margin-bottom: 0;
+}
+
+.about-content h4 {
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.about-content {
+    height: 100%;
+    width: 100%;
+    padding: 40px;
+}
+
+.about-content-text p {
+    margin-bottom: 15px;
+}
+
+
+/* end of image content */
+
+
+/* end of about */
+
+
+/* begin of services */
+
+.services {
+    position: relative;
+    padding: 70px 90px;
+    width: 100%;
+}
+
+.services .card {
+    display: flex;
+    box-shadow: 0px 0px 6px gray;
+    border-radius: 10px;
+    margin-left: 15px;
+    width: 48%;
+}
+
+.services .card .card-body {
+    padding: 10px 20px;
+}
+
+.services .card .card-body h4 {
+    font-weight: 300;
+    font-style: italic;
+    margin: 15px;
+    font-size: 2rem;
+}
+
+.services .card .card-body {
+    margin-left: 35px;
+    margin-bottom: 20px;
+    color: var(--black);
+    width: 75%;
+    font-size: 0.8rem;
+}
+
+.services .card .card-body a {
+    display: block;
+    margin-top: 25px;
+    color: var(--black);
+    font-style: italic;
+}
+
+.services .card img {
+    width: 50%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+
+/* end of services */
+
+
+/* what customers says */
+
+.customers {
+    position: relative;
+    padding: 70px 50px;
+}
+
+.customers p {
+    margin-bottom: 20px;
+}
+
+.grp-msgs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: top 25px;
+}
+
+.box {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px gray;
+    width: 40%;
+    margin: 0 20px;
+}
+
+.box .box-img {
+    margin: 20px 0;
+}
+
+.box .line-under-title {
+    width: 85px;
+    height: 4px;
+    background-color: black;
+    position: relative;
+    border-radius: 2px;
+}
+
+.box .line-under-title .line-center {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 40px;
+    height: 8px;
+    background-color: var(--green);
+}
+
+
+/* end of customers says */
+
+
+/* footer */
+
+footer {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    margin: 0 auto;
+    grid-column-gap: 50px;
+    padding: 40px 70px;
+    background-color: var(--black);
+    color: rgb(218, 218, 218);
+}
+
+.titles {
+    font-size: 1.4rem;
+    color: var(--light);
+    margin-bottom: 35px;
+}
+
+footer .company p {
+    line-height: 30px;
+    letter-spacing: 4px;
+    font-size: 0.8rem;
+}
+
+footer .company h3 span {
+    color: var(--red);
+}
+
+footer .contact ul {
+    list-style: none;
+}
+
+footer .contact ul li {
+    margin-bottom: 15px;
+}
+
+footer .contact ul li i {
+    margin-right: 10px;
+}
+
+.grp-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grp-icons i {
+    display: block;
+}
+
+
+/* end of footer */
+
+
+/* page gallery */
+
+.main-gallery {
+    min-height: calc( 100vh - 94px);
+    position: relative;
+}
+
+.main-gallery .active {
+    display: block;
+    animation: myscale .5s;
+}
+
+.main-gallery .slide {
+    position: relative;
+    display: none;
+}
+
+.main-gallery .active {
+    display: block;
+    animation: myscale .5s;
+}
+
+
+/* todo : myscale */
+
+.main-gallery .slide img {
+    height: 100%;
+    width: 100%;
+}
+
+.main-gallery .slide-body h2 {
+    position: absolute;
+    top: 50%;
+    left: 45px;
+    transform: translateY(-50%);
+    font-size: 5rem;
+    color: white;
+    text-shadow: 0px 0px 15px black;
+    letter-spacing: 3px;
+}
+
+.main-gallery .slides-indicators {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main-gallery .slides-indicators span {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.main-gallery .slides-indicators .active {
+    color: var(--green)!important;
+}
+
+.gallery-items {
+    width: 100%;
+    padding: 30px 70px;
+}
+
+.gallery-items .gallery-items-grid {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.gallery-items .gallery-items-grid .gallery-item .card-gallery {
+    border-radius: 3px;
+}
+
+.gallery-items .gallery-items-grid .gallery-item .card-gallery .card-gallery-img {
+    max-width: 300px;
+    height: 350px;
+    margin-bottom: 15px;
+}
+
+.gallery-items .gallery-items-grid .gallery-item .card-gallery .card-gallery-img img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* page contact  */
+
+.page-contact {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 30px 70px;
+}
+
+.contact-title {
+    font-size: 4rem;
+    margin-bottom: 0;
+}
+
+.subtitle {
+    font-size: 3rem;
+    color: var(--gray);
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.map {
+    position: relative;
+    display: inline-block;
+}
+
+.map::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--green);
+    right: -12px;
+    top: 1rem;
+    z-index: -1;
+}
+
+.contact-form {
+    width: 100%;
+    padding: 20px;
+}
+
+.contact-form form input {
+    display: block;
+    margin-bottom: 15px;
+    width: 100%;
+    background-color: var(--light);
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--gray);
+    padding: 3px 4px;
+}
+
+.contact-form form input[type="submit"] {
+    margin-top: 15px;
+    background-color: var(--green);
+    color: var(--light);
+    margin-bottom: 0;
+    padding: 10px 0;
+}
+
+.contact-form form textarea {
+    width: 100%;
+    background-color: var(--light);
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--gray);
+}
+
+
+/* 
+error contact
+*/
+
+.error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+
+/* end */
+
+
+/* reservaton */
+
+.reservation {
+    position: relative;
+    width: 100%;
+    padding: 30px 70px;
+}
+
+.vehicules {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+}
+
+.vehicule {
+    max-width: 350px;
+    height: 350px;
+    position: relative;
+    cursor: pointer;
+}
+
+.vehicule:hover img {
+    transform: scale(1.2);
+    transition: .5s;
+}
+
+.vehicule img {
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.vehicule .vehicule-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-shadow: 0 0 10px black;
+    opacity: 0;
+    transition: .5s all;
+    font-size: 3rem;
+}
+
+.vehicule:hover .vehicule-body {
+    opacity: 1;
+}
+
+.reservation form {
+    margin: 30px 0;
+}
+
+.reservation form h2 {
+    margin: 10px 0;
+    font-size: 2rem;
+}
+
+.reservation form input {
+    display: block;
+}
+
+.reservation form input[type="radio"] {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.reservation form input[type="submit"] {
+    padding: 10px 40px;
+    color: var(--light);
+    background-color: var(--green);
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    margin: 20px auto;
+}
+
+.reservation form input[type="date"] {
+    border: 1px solid gray;
+    padding: 5px 10px;
+}
+
+.resultat {
+    width: 100%;
+    text-align: center;
+    background-color: var(--black);
+    color: white;
+    font-size: 2rem;
+}
+
+
+/* end of reservation */
+
+@media screen and (max-width:677px) {
+    header .navbar-sm-links {
+        display: none;
+    }
+    .main .img-box {
+        display: none;
+    }
+    .main .content h2 span {
+        color: var(--black);
+    }
+    .about {
+        display: block;
+        padding: 0px 30px;
+    }
+    .about-content .about-content-text {
+        height: 100%;
+        width: 100%;
+    }
+    .about-img {
+        height: 450px;
+        width: 100%;
+    }
+    .services {
+        display: none;
+    }
+    .grp-msgs {
+        display: block;
+    }
+    .grp-msgs .box {
+        width: 100%;
+        margin: 20px 0;
+    }
+    footer {
+        display: block;
+    }
+    footer div {
+        margin: 40px 0;
+    }
+    .gallery-items .gallery-items-grid {
+        display: block;
+    }
+    .gallery-items .gallery-items-grid .gallery-item {
+        margin: 20px 0;
+    }
+    .vehicules {
+        display: block;
+    }
+    header .navbar-toggler {
+        display: block;
+        align-self: center;
+    }
+    header .navbar-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        background-color: var(--black);
+        z-index: 99;
+        height: 100%;
+        width: 100%;
+        color: var(--light);
+    }
+    header .navbar-links li {
+        padding: 10px;
+    }
+    header .navbar-links li a {
+        color: var(--light);
+        font-size: 1.4rem;
+    }
+    header .navbar-links .close {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 25px;
+    }
+    header .navbar-links .close i {
+        color: white;
+    }
+    .row {
+        display: block;
+    }
+}
