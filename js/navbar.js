@@ -3,11 +3,20 @@ const bar = document.querySelector("header .navbar-toggler");
 const navbar = document.querySelector("header .navbar-links");
 
 
-const showbar = () => { navbar.classList.add("active") };
-const hidebar = () => { navbar.classList.remove("active") };
+const showbar = () => { navbar.style.display = "flex"; };
+const hidebar = () => { navbar.style.display = "none"; };
+
+const resize = () => {
+
+    if (window.innerWidth > 677) {
+        navbar.style.display = "flex";
+    } else {
+        navbar.style.display = "none";
+    }
+
+}
 
 
-
-
-bar.addEventListener("click", () => { navbar.classList.add("active") });
-close.addEventListener("click", () => { navbar.classList.remove("active") });
+window.onresize = resize;
+bar.addEventListener("click", showbar);
+close.addEventListener("click", hidebar);
