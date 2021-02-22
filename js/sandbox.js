@@ -162,7 +162,7 @@ const mapForm = index => {
           <h2>
             Number of days :
         </h2>
-        <input type="number" name="number" min="1" max="20">
+        <input type="number" name="number" value="1" min="1" max="20">
       
  <input type="hidden" name="price" value="${data.vehicules[index].price}" />
         <input type="submit" value="Submit"> 
@@ -188,7 +188,12 @@ const calcul = () => {
     total = (Number(price.value) + pricecarb + pricebv) * number.value;
 
     console.log(total);
-    document.querySelector(".resultat").innerHTML = total + " $";
+    if (pricecarb == 0 || pricebv == 0) {
+        document.querySelector(".resultat").innerHTML = "Selectionner les donnes de vehicule";
+    } else {
+        document.querySelector(".resultat").innerHTML = total + " $";
+    }
+
     scrollTo(0, 0);
     // Prix total = (prix de véhicules + percentage carburant + percentage boite à vitesse)*durée de réservation
 
